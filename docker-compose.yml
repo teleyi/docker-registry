@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+  registry:
+    build: .
+    container_name: registry
+    network_mode: host
+    restart: always
+    volumes:
+      - ./images:/var/lib/registry
